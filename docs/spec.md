@@ -16,6 +16,7 @@ Other docs:
 - Skills protocol → [`skills-protocol.md`](skills-protocol.md)
 - Agent adapters → [`agent-adapters.md`](agent-adapters.md)
 - Modes → [`modes.md`](modes.md)
+- Expo mobile apps preview plan → [`expo-mobile-apps-preview-plan.md`](expo-mobile-apps-preview-plan.md)
 - Automations self-evolution → [`../specs/current/automation-self-evolution.md`](../specs/current/automation-self-evolution.md)
 - References & credits → [`references.md`](references.md)
 - Roadmap → [`roadmap.md`](roadmap.md)
@@ -62,8 +63,12 @@ User uploads a screenshot, brand guide PDF, or Figma link. OD runs `design-syste
 ### S5 — "Let the design agent evolve"
 User connects sources such as GitHub, Notion, Drive, Slack, or a local folder, then picks an Automation template like "Ingest into memory tree," "Extract design system," or "Crystallize this run into a skill." OD canonicalizes the source, optionally compresses it, proposes memory / skill / design-system changes, and only applies them after the configured review policy. Future agent runs consume those accepted nodes automatically.
 
+### S6 — "Create a real Expo mobile app"
+User asks for a mobile app, OD selects an Expo-specific skill, and the agent produces a real Expo/React Native project rather than an HTML phone mockup. The daemon starts an Expo Web preview runtime for the generated project, the web app renders it in the normal preview surface, and the user can open the same project on a phone through URL/QR handoff when available. This track is planned in [`expo-mobile-apps-preview-plan.md`](expo-mobile-apps-preview-plan.md).
+
 The first four scenarios map 1:1 to the four modes in [`modes.md`](modes.md).
 The fifth is the cross-product loop described in [`automation-self-evolution.md`](../specs/current/automation-self-evolution.md).
+The sixth is the planned Expo mobile-app runtime extension.
 
 ## 5. High-level modules
 
